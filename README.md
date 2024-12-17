@@ -1,5 +1,7 @@
 # **Sistema de Gestión de Inventario**
 
+<a href="https://github.com/coxmau77/inventario_pfi" target="_blank" rel="noopener noreferrer">Repositorio en [gitHub]</a>
+
 ### **Descripción del Proyecto**
 
 Este proyecto es una aplicación de línea de comandos desarrollada en **Python** para gestionar el inventario de una pequeña tienda.  
@@ -52,8 +54,11 @@ Además, incluye funcionalidades avanzadas como generación de reportes de produ
 
 ### **Búsqueda y Reportes**
 
-- **Búsqueda de Productos:** Encuentra productos específicos por su ID, con opción a incluir búsqueda por nombre o categoría.
+- **Búsqueda de Productos:** Encuentra productos específicos por su ID, con opción a incluir búsqueda por nombre o categoría _(En desarrollo)_.
+
 - **Reporte de Bajo Stock:** Genera un informe con productos cuyo stock está por debajo de un límite especificado.
+
+![Reporte de Bajo Stock](./img/Captura%20de%20pantalla%202024-12-17%20165046.png)
 
 ---
 
@@ -82,6 +87,8 @@ Además, incluye funcionalidades avanzadas como generación de reportes de produ
      - Generar reporte de bajo stock
      - Gestionar categorías
      - Salir
+
+![Menú Principal](./img/Captura%20de%20pantalla%202024-12-17%20165750.png)
 
 4. **Interacción:**
    - Navega por las opciones del menú escribiendo el número correspondiente y siguiendo las instrucciones en pantalla.
@@ -112,7 +119,7 @@ Para aprender más sobre Python, visita la documentación oficial:
 
 ### **Créditos**
 
-Este proyecto fue desarrollado por **Mauricio Cox** como parte del Proyecto Final Integrador (PFI) del curso de introducción a Python.
+Este proyecto fue desarrollado por **Mauricio Cox** como parte del Proyecto Final Integrador (PFI) del curso de introducción a Python mediante la Agencia de Habilidades para el futuro del Ministerio de Educación y Talento Tech 2024.
 
 ---
 
