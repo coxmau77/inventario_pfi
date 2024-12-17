@@ -33,12 +33,22 @@ Además, incluye funcionalidades avanzadas como generación de reportes de produ
 
 ### **Gestión de Categorías**
 
-![Gestión de Productos](./img/Captura%20de%20pantalla%202024-12-17%20150123.png)
-
 - **Visualización de Categorías:** Consulta las categorías disponibles en la tienda.
+
+![Visualización de Categorías](./img/Captura%20de%20pantalla%202024-12-17%20163557.png)
+
 - **Agregar Categorías:** Permite incorporar nuevas categorías para productos.
+
+![Agregar Categorías](./img/Captura%20de%20pantalla%202024-12-17%20163843.png)
+
+
 - **Modificar Categorías:** Cambia el nombre de categorías existentes.
+
+![Modificar Categorías](./img/Captura%20de%20pantalla%202024-12-17%20164244.png)
+
 - **Eliminar Categorías:** Elimina categorías que ya no sean necesarias.
+
+![Modificar Categorías](./img/Captura%20de%20pantalla%202024-12-17%20164516.png)
 
 ### **Búsqueda y Reportes**
 

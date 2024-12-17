@@ -67,7 +67,6 @@ def agregar_categoria():
     else:
         print("\nLa categoría ya existe o el nombre no es válido.\n")
 
-
 # Modificar una categoría existente
 def modificar_categoria():
     mostrar_categorias()
@@ -82,7 +81,6 @@ def modificar_categoria():
     else:
         print("\nSelección no válida.\n")
 
-
 # Eliminar una categoría
 def eliminar_categoria():
     mostrar_categorias()
@@ -92,7 +90,6 @@ def eliminar_categoria():
         print(f"\nCategoría '{categoria_eliminada}' eliminada con éxito.\n")
     else:
         print("\nSelección no válida.\n")
-
 
 # Registrar un producto utilizando las categorías disponibles
 def registrar_producto():
