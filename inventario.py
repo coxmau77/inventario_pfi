@@ -25,6 +25,69 @@ def inicializar_bd():
 categorias = ["Tecnología", "Deportes", "Hogar", "Moda", "Juguetes"]
 
 
+# Función para buscar productos
+def buscar_producto():
+    print("\n--- Búsqueda de Productos ---")
+    print("1. Buscar por ID")
+    print("2. Buscar por Nombre")
+    print("3. Buscar por Categoría")
+    opcion = input("Seleccione una opción: ").strip()
+
+    conexion = sqlite3.connect("inventario.db")
+    cursor = conexion.cursor()
+
+    if opcion == "1":
+        id_producto = input("Ingrese el ID del producto: ").strip()
+        if id_producto.isdigit():
+            cursor.execute("SELECT * FROM productos WHERE id = ?", (int(id_producto),))
+        else:
+            print("\nID no válido.\n")
+            conexion.close()
+            return
+    elif opcion == "2":
+        nombre = input("Ingrese el nombre del producto: ").strip()
+        cursor.execute("SELECT * FROM productos WHERE nombre LIKE ?", (f"%{nombre}%",))
+    elif opcion == "3":
+        # Mostrar categorías existentes
+        print("\nCategorías disponibles:")
+        for idx, categoria in enumerate(categorias, 1):
+            print(f"{idx}. {categoria}")
+        print()
+
+        seleccion = input("Seleccione el número de la categoría: ").strip()
+
+        if seleccion.isdigit() and 1 <= int(seleccion) <= len(categorias):
+            categoria_seleccionada = categorias[int(seleccion) - 1]
+            cursor.execute(
+                "SELECT * FROM productos WHERE categoria = ?", (categoria_seleccionada,)
+            )
+        else:
+            print("\nSelección no válida.\n")
+            conexion.close()
+            return
+    else:
+        print("\nOpción no válida.\n")
+        conexion.close()
+        return
+
+    productos = cursor.fetchall()
+    conexion.close()
+
+    if not productos:
+        print("\nNo se encontraron productos.\n")
+    else:
+        print("\nResultados de la búsqueda:")
+        for producto in productos:
+            print(
+                f"ID: {producto[0]} | Nombre: {producto[1]} | Descripción: {producto[2]}"
+            )
+            print(
+                f"Cantidad: {producto[3]} | Precio: ${producto[4]:.2f} | Categoría: {producto[5]}"
+            )
+            print("-" * 50)
+        print()
+
+
 # Función para gestionar las categorías
 def gestionar_categorias():
     while True:
@@ -67,6 +130,7 @@ def agregar_categoria():
     else:
         print("\nLa categoría ya existe o el nombre no es válido.\n")
 
+
 # Modificar una categoría existente
 def modificar_categoria():
     mostrar_categorias()
@@ -81,6 +145,7 @@ def modificar_categoria():
     else:
         print("\nSelección no válida.\n")
 
+
 # Eliminar una categoría
 def eliminar_categoria():
     mostrar_categorias()
@@ -90,6 +155,7 @@ def eliminar_categoria():
         print(f"\nCategoría '{categoria_eliminada}' eliminada con éxito.\n")
     else:
         print("\nSelección no válida.\n")
+
 
 # Registrar un producto utilizando las categorías disponibles
 def registrar_producto():
@@ -235,7 +301,8 @@ def menu():
         print("4. Eliminar producto")
         print("5. Generar reporte de bajo stock")
         print("6. Gestionar categorías")
-        print("7. Salir")
+        print("7. Buscar productos")  # Nueva opción
+        print("8. Salir")
         opcion = input("Seleccione una opción: ").strip()
 
         if opcion == "1":
@@ -250,7 +317,9 @@ def menu():
             reporte_bajo_stock()
         elif opcion == "6":
             gestionar_categorias()
-        elif opcion == "7":
+        elif opcion == "7":  # Llamada a la nueva función
+            buscar_producto()
+        elif opcion == "8":
             print("\nSaliendo del sistema. ¡Hasta luego!")
             break
         else:

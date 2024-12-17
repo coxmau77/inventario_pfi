@@ -54,7 +54,9 @@ Además, incluye funcionalidades avanzadas como generación de reportes de produ
 
 ### **Búsqueda y Reportes**
 
-- **Búsqueda de Productos:** Encuentra productos específicos por su ID, con opción a incluir búsqueda por nombre o categoría _(En desarrollo)_.
+- **Búsqueda de Productos:** Encuentra productos específicos por su ID, con opción a incluir búsqueda por nombre o categoría.
+
+![Búsqueda de Productos](./img/Captura%20de%20pantalla%202024-12-17%20172457.png)
 
 - **Reporte de Bajo Stock:** Genera un informe con productos cuyo stock está por debajo de un límite especificado.
 
