@@ -5,7 +5,7 @@ El sistema permite registrar, actualizar, eliminar, buscar y visualizar producto
 Además, incluye funcionalidades avanzadas como generación de reportes de productos con bajo stock y gestión de categorías.
 
 Funcionalidades
-Gestión de Productos
+Gestión de Productos 
 Registro de Productos: Agrega nuevos productos al inventario indicando su nombre, descripción, cantidad, precio y categoría.
 Actualización de Productos: Permite modificar la cantidad de productos existentes utilizando su ID.
 Eliminación de Productos: Elimina productos del inventario de forma permanente.
